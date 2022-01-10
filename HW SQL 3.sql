@@ -49,7 +49,7 @@ select employee_name, role_name
 	from roles_employee re 
 		left join employees e on re.employee_id = e.id 
 		join roles r on re.role_id = r.id
-		where role_name like '%Java%';
+		where role_name like '%Java_developer%';
 	
 --8. Вывести имена и должность только Python разработчиков.
 select employee_name, role_name
@@ -112,7 +112,7 @@ select monthly_salary, role_name
  		join employee_salary es on es.salary_id = s.id 
  		join roles_employee re on re.employee_id = es.employee_id 
  		join roles r on r.id = re.role_id 
- 			where role_name like '%Java%';
+ 			where role_name like '%Java_developer%';
  		
  --16. Вывести зарплаты Python разработчиков
 select monthly_salary, role_name
